@@ -1,3 +1,39 @@
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0; }
 
+#wrap {
+  min-height: 100%;
+  margin: 0 auto -30px;
+  padding: 0 0 30px; }
+
+footer {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 30px; }
+  footer p {
+    padding-top: 0.5em; }
+
+p {
+  font-size: 1em; }
+
+header, footer {
+  background-color: #772953;
+  border-color: #511c39;
+  color: #fff;
+  text-align: center; }
+
+header {
+  padding: 0.2em;
+  color: white; }
+  header h1 {
+    margin: 0; }
+
+.buttonHolder {
+  margin: 0.2em auto; }
+  .buttonHolder button {
+    margin: 0.2em; }
 
 /*# sourceMappingURL=style.css.map */

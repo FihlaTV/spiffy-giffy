@@ -4,10 +4,8 @@
 		<meta charset="UTF-8">
 		<title>Spiffy Giphy</title>
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="./assets/styles/united.css">
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<link rel="stylesheet" href="./assets/styles/style.css">
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,12 +13,42 @@
 		
 	</head>
 
-
-
-
 	<body>
+		<div id="wrap">
+			<header>
+				<h1>Spiffy with Giphy</h1>
+			</header>
+			<main class="container">
+				<section>
+					<div class="row buttonHolder">
+						<!-- fill with buttons loaded dynamically from an array -->
+					</div>
+				</section>
+				<section>
+					<div class="row gifHolder">
+	<!-- fill with gifs returned from an ajax call -->
+					</div>
+				</section>
+				<!-- <section>
+					<form action="">
+						<label for=""></label>
+						<input type="text">
+						<button></button>
+					</form>
+				</section> -->
+			</main>
+		</div> <!-- end of id wrap to make footer sticky -->
+		<footer>
+			<div class="container">
+				<div class="row">
+						<p>Katy Cassidy | ihatetoast</p>
+				</div>
+			
+			</div>
+		</footer>
 		
 
 	<script src="./assets/scripts/main.js"></script>
 	</body>
+
 </html>

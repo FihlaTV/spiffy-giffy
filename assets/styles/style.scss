@@ -1,0 +1,48 @@
+//deal with sticky footer
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+#wrap {
+	min-height: 100%;
+	// height: auto;
+	margin: 0 auto -30px;
+	padding: 0 0 30px;
+}
+footer {
+	position: absolute;
+	bottom: 0%;
+	width: 100%;
+	height: 30px;
+	p {
+		padding-top: 0.5em;
+	}
+}
+
+// regular post bs styling
+p {
+	font-size: 1em;
+}
+
+header, footer {
+	background-color: #772953;
+  border-color: #511c39;
+  color: #fff;
+  text-align: center;
+}
+
+header {
+	padding: 0.2em;
+	color: white;
+	h1 {
+		margin: 0;
+	}
+}
+
+.buttonHolder {
+	margin: 0.2em auto;
+	button {
+		margin: 0.2em;
+	}
+}
