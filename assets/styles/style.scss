@@ -6,13 +6,11 @@ html, body {
 }
 #wrap {
 	min-height: 100%;
-	// height: auto;
+	height: auto;
 	margin: 0 auto -30px;
 	padding: 0 0 30px;
 }
 footer {
-	position: absolute;
-	bottom: 0%;
 	width: 100%;
 	height: 30px;
 	p {
@@ -39,10 +37,17 @@ header {
 		margin: 0;
 	}
 }
-
+//the buttons
 .buttonHolder {
 	margin: 0.2em auto;
 	button {
 		margin: 0.2em;
+	}
+}
+
+//the gifs
+.gifDiv {
+	img {
+		width: 100%;
 	}
 }
