@@ -19,6 +19,9 @@ footer {
 }
 
 // regular post bs styling
+body {
+	background-color: #f8e6f0;
+}
 p {
 	font-size: 1em;
 }
@@ -31,7 +34,7 @@ header, footer {
 }
 
 header {
-	padding: 0.2em;
+	padding: 1em;
 	color: white;
 	h1 {
 		margin: 0;
@@ -47,7 +50,17 @@ header {
 
 //the gifs
 .gifDiv {
+	text-align:center;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	margin: 1em 1em 2em 1em;
+	background-color: #eaeaea;
+	padding: 1em;
 	img {
 		width: 100%;
+	}
+	p {
+		margin-top: 1em;
+		font-size: 1.5em;
 	}
 }

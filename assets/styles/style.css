@@ -15,6 +15,9 @@ footer {
   footer p {
     padding-top: 0.5em; }
 
+body {
+  background-color: #f8e6f0; }
+
 p {
   font-size: 1em; }
 
@@ -25,7 +28,7 @@ header, footer {
   text-align: center; }
 
 header {
-  padding: 0.2em;
+  padding: 1em;
   color: white; }
   header h1 {
     margin: 0; }
@@ -35,7 +38,17 @@ header {
   .buttonHolder button {
     margin: 0.2em; }
 
-.gifDiv img {
-  width: 100%; }
+.gifDiv {
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin: 1em 1em 2em 1em;
+  background-color: #eaeaea;
+  padding: 1em; }
+  .gifDiv img {
+    width: 100%; }
+  .gifDiv p {
+    margin-top: 1em;
+    font-size: 1.5em; }
 
 /*# sourceMappingURL=style.css.map */

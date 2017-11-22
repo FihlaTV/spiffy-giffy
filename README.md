@@ -2,16 +2,16 @@
 A small project to practice AJAX GET requests using the Giphy API.
 
 
-# INSTRUCTIONS
-* (_X_) create an array of strings of topics i like (let topics)
+# To Do:
+* (_X_) create an array of strings of topics I like (let topics)
 * (_X_) iterate over topics and create buttons in your HTML.
-* (__) <button> behaviour: 
+* (_X_) <button> behaviour: 
     - get 10 static/non-animated imgs from GIPHY API
     - append to the page
     - rating below the img
-* (__) <img> behaviour:
+* (_X_) <img> behaviour:
     - click to animate / stop animate
-    - toggle
+    - ~~toggle~~ on click replace last part of src string
 * (__) Create a form element
     - input field
     - push value to array

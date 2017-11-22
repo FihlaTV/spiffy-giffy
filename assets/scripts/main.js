@@ -1,14 +1,16 @@
 $(document).ready(function(){
 console.log("if you see this, you dun did load.");
 
-let topics = ["greyhound", "dog", "cat", "kitten", "puppy", "sloth", "bicycle", "buscemi", "motorcycle", "knitting", "australia"];
+let topics = ["greyhounds", "sighthound", "dog", "cat", "kittens", "puppies", "sloth", "bicycle", "buscemi", "motorcycle", "knitting", "australia"];
 
 // dynamically generates buttons
-let giphrames = topics.map((topic, idx, arr) =>{
-	$('.buttonHolder').append(`
-		<button class="btn btn-primary btn-sm topic" id=${topic}>${topic}</button>
-	`);
-});
+function loadButtons(){
+	$('.buttonHolder').empty();
+	let giphrames = topics.map((topic, idx, arr) =>{
+		$('.buttonHolder').append(`
+			<button class="btn btn-primary topic" id=${topic}>${topic}</button>
+		`);
+	});
 
 // button event listener
 $('.topic').on("click", function(){
@@ -28,9 +30,9 @@ $('.topic').on("click", function(){
 		$.each( dataArr, function( idx, val) {
 			let gif = dataArr[idx];
 			$('.gifHolder').append(`
-					<div class="col-xs-5 col-sm-3 col-md-3 col-lg-3 gifDiv">
+					<div class="col-xs-10 col-xs-offset-1  col-sm-3 col-md-4 col-lg-3 gifDiv">
 						<img id=${term} class="imgGif" src="${gif.images.original_still.url}" id="${term}" alt="a gif of ${term}"/>
-						<caption class="rating">GIF rating: ${gif.rating}</caption>
+						<p class="rating">GIF rating: ${gif.rating}</p>
 					</div>
 			`);
 			
@@ -48,10 +50,61 @@ $('.topic').on("click", function(){
 					} else {
 						$(this).attr('src', src.replace('.gif', '_s.gif'));
 					}
+					//cannot believe that worked! 
 				})
 			})
 	})
 });
+
+	
+}
+
+loadButtons();
+
+
+
+// Since your links are appended dynamically to the page, you need to use document.on() to capture the click events.
+// the syntax for appending event listeners to dynamic content is as follows
+
+$(document).on("submit","form", function(e){
+	e.preventDefault();
+	let formVal = $("input").val();
+	topics.push(formVal);
+	loadButtons();
+	return false;
+})
+
+
+
+
+
+
+
+
+});
+//////////////////////////
+//////////////////////////
+// PSEUDOCODE AND NOTES //
+//////////////////////////
+//////////////////////////
+
+
+// 1) create an array of topics. not too many. will populate later with more.
+
+// 2) dynamically load buttons onto page
+
+// 3) add event that listens for btn being clicked.
+
+// 4) retrieve 10 stills from giphy with the topic that is that button's topic (text or set as id)
+
+// 5) clicking on image toggles begtween still and animation
+
+// 6) form with input to add another topic
+
+// 7) newly added topic populates with 10 gifs and the onclick/toggle fcn
+
+// 8) change code so the same 10 aren't always chosen. 
+
 // add click event to each image
 // $( ".selected" ).each(function(index) {
 //     $(this).on("click", function(){
@@ -90,34 +143,6 @@ $('.topic').on("click", function(){
 </div>*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-});
-
-// 1) create an array of topics. not too many. will populate later with more.
-
-// 2) dynamically load buttons onto page
-
-// 3) add event that listens for btn being clicked.
-
-// 4) retrieve 10 stills from giphy with the topic that is that button's topic (text or set as id)
-
-// 5) clicking on image toggles begtween still and animation
-
-// 6) form with input to add another topic
-
-// 7) newly added topic populates with 10 gifs and the onclick/toggle fcn
-
-// 8) change code so the same 10 aren't always chosen. 
 
 
 
