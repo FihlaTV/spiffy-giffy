@@ -42,10 +42,8 @@ $('.topic').on("click", function(){
 				$(this).on("click", function(){
 					let src = $(this).attr("src");
 					console.log($(this).attr("src"));
-					//src is a string. split it. 
-					console.log((src.split("_")));
-					//["https://media0.giphy.com/media/v6NlYjkDOEoBG/giphy", "s.gif"]
-					if($(src.split("_")).last()[0] == "s.gif"){
+				//use endsWith for string
+					if(src.endsWith("s.gif")){
 						$(this).attr('src', src.replace('_s.gif', '.gif'));
 					} else {
 						$(this).attr('src', src.replace('.gif', '_s.gif'));
