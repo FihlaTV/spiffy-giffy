@@ -11,7 +11,8 @@ html, body {
 
 footer {
   width: 100%;
-  height: 30px; }
+  height: 30px;
+  margin-top: 0.8em; }
   footer p {
     padding-top: 0.5em; }
 
@@ -29,24 +30,41 @@ header, footer {
 
 header {
   padding: 1em;
-  color: white; }
+  color: white;
+  margin-bottom: 1em; }
   header h1 {
+    font-size: 1.5em;
     margin: 0; }
+    @media screen and (min-width: 500px) {
+      header h1 {
+        font-size: 2em; } }
 
 .buttonHolder {
   margin: 0.2em auto; }
   .buttonHolder button {
     margin: 0.2em; }
 
+.formDiv {
+  background-color: #eaeaea;
+  border: 2px solid #ccc;
+  border-radius: 2px; }
+  .formDiv h3 {
+    margin: 0; }
+
+input[type="text"] {
+  margin: 0.5em 0 0.7em 0; }
+
 .gifDiv {
   text-align: center;
   border: 2px solid #ccc;
-  border-radius: 5px;
-  margin: 1em 1em 2em 1em;
+  border-radius: 3px;
+  margin-top: 0.5em;
+  box-shadow: 2px 3px 3px 1px #c9c9c9;
   background-color: #eaeaea;
   padding: 1em; }
   .gifDiv img {
-    width: 100%; }
+    width: 100%;
+    border: 2px solid #ccc; }
   .gifDiv p {
     margin-top: 1em;
     font-size: 1.5em; }
