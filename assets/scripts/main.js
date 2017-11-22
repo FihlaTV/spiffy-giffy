@@ -1,7 +1,7 @@
 $(document).ready(function(){
 console.log("if you see this, you dun did load.");
 
-let topics = ["greyhounds", "sighthound", "dog", "cat", "kittens", "puppies", "sloth", "bicycle", "Buscemi", "motorcycle", "knitting", "Australia"];
+let topics = ["greyhounds", "sighthound", "dog", "cat", "kittens", "puppies", "sloth", "bicycle", "Buscemi", "motorcycle", "knitting", "Australia", "Rachel", "Lance", "Thomas"];
 
 // dynamically generates buttons
 function loadButtons(){
