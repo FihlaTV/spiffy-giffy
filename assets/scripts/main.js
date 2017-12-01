@@ -1,19 +1,36 @@
 $(document).ready(function(){
 console.log("if you see this, you dun did load.");
 
-let topics = ["greyhounds", "sighthound", "dog", "cat", "kittens", "puppies", "sloth", "bicycle", "Buscemi", "motorcycle", "knitting", "Australia", "Rachel", "Lance", "Thomas"];
+let topics = ["greyhounds", "sighthound", "kittens", "puppies", "sloths", "bicycle", "motorcycle", "Australia"];
+
+let people = ["Katy", "Cassidy", "Buscemi","Rossi", "Erik", "Alec", "Rachel", "Lance", "Thomas", "Osei"];
+
+let misc = ["I hate toast"];
 
 // dynamically generates buttons
 function loadButtons(){
-	$('.buttonHolder').empty();
-	let giphrames = topics.map((topic, idx, arr) =>{
-		$('.buttonHolder').append(`
-			<button class="btn btn-primary topic" id=${topic}>${topic}</button>
+	$('.buttonHolder1').empty();
+	$('.buttonHolder2').empty();
+	$('.buttonHolder3').empty();
+	let giphrames1 = topics.map((topic, idx, arr) =>{
+		$('.buttonHolder1').append(`
+			<button class="btn btn-primary topic terms" id=${topic}>${topic}</button>
+		`);
+	});
+	let giphrames2 = people.map((person, idx, arr) =>{
+		$('.buttonHolder2').append(`
+			<button class="btn btn-primary person terms" id=${person}>${person}</button>
+		`);
+	});
+	let giphrames3 = misc.map((thing, idx, arr) =>{
+		$('.buttonHolder3').append(`
+			<button class="btn btn-primary misc terms" id=${thing}>${thing}</button>
 		`);
 	});
 
+
 // button event listener
-$('.topic').on("click", function(){
+$('.topic, .person, .misc').on("click", function(){
 	// console.log($(this).attr("id"));
 	let term = $(this).attr("id");
 	$('.gifHolder').empty();
@@ -55,30 +72,19 @@ $('.topic').on("click", function(){
 			})
 	})
 });
-
 	
 }
 
 loadButtons();
 
-
-
-// Since your links are appended dynamically to the page, you need to use document.on() to capture the click events.
-// the syntax for appending event listeners to dynamic content is as follows
-
 $(document).on("submit","form", function(e){
 	e.preventDefault();
-	let formVal = $("input").val();
-	topics.push(formVal);
+	let formVal = $("input").val().trim();
+	misc.push(formVal);
+	$("input:text").val('');
 	loadButtons();
 	return false;
 })
-
-
-
-
-
-
 
 
 });

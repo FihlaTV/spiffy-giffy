@@ -19,17 +19,16 @@ footer {
 	}
 }
 
-// regular post bs styling
 body {
-	background-color: #f8e6f0;
+	background-color: #2A3955;
 }
 p {
 	font-size: 1em;
 }
 
 header, footer {
-	background-color: #772953;
-  border-color: #511c39;
+	background-color: #D7662F;
+  border-color: #E89C60;
   color: #fff;
   text-align: center;
 }
@@ -47,24 +46,42 @@ header {
 	}
 }
 //the buttons
-.buttonHolder {
+.buttonHolder1, .buttonHolder2, .buttonHolder3 {
 	margin: 0.2em auto;
+
 	button {
+		background-color: rgb(125, 181, 74);
+		border: 1px solid rgb(231, 220, 89);
+		color: #2A3955;
 		margin: 0.2em;
+		&:hover{
+			background-color: rgb(231, 220, 89);
+			color: #2A3955
+		}
 	}
 }
+
+.buttonTitles {
+	color: rgb(253, 252, 251);
+	margin: 0.2em 0 0.1em;
+}
 .formDiv{
-	background-color: #eaeaea;
+	background-color: #1F7093;
 	border: 2px solid #ccc;
 	border-radius: 2px;
-	h3 {
-		margin: 0;
-	}
 }
 input[type="text"]{
 	margin: 0.5em 0 0.7em 0;
 }
-
+.submit {
+	background-color:#1F7093;
+	border: 2px solid #ccc;
+	border-radius: 50px;
+	&:hover{
+		background-color: #D7662F;
+		color: #2A3955;
+	}
+}
 //the gifs
 .gifDiv {
 	text-align:center;
