@@ -1,7 +1,7 @@
 $(document).ready(function(){
 console.log("if you see this, you dun did load.");
 
-let topics = ["greyhounds", "sighthound", "kittens", "puppies", "sloths", "bicycle", "motorcycle", "Australia"];
+let topics = ["greyhounds", "sighthound", "kittens", "puppies", "sloths", "bicycle", "motorcycle", "numbat", "axolotl"];
 
 let people = ["Katy", "Cassidy", "Buscemi","Rossi", "Erik", "Alec", "Rachel", "Lance", "Thomas", "Osei"];
 
@@ -80,10 +80,16 @@ loadButtons();
 $(document).on("submit","form", function(e){
 	e.preventDefault();
 	let formVal = $("input").val().trim();
-	misc.push(formVal);
-	$("input:text").val('');
-	loadButtons();
-	return false;
+	if ((formVal == '')||(formVal == null)){
+		alert("Oops. Just say 'No!' to 'null', numbskull?");
+		return;
+	} else{
+		misc.push(formVal);
+		$("input:text").val('');
+		loadButtons();
+		return false;
+	}
+	
 })
 
 
