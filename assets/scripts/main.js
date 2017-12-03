@@ -40,16 +40,13 @@ $('.topic, .person, .misc').on("click", function(){
 		url: queryURL,
 		method: 'GET', 
 	}).done(function(res){
-		console.log(res.data[0]);
 		let dataArr = res.data;
-		let urlStill = 
-		console.log(dataArr);
 		//TODO: figure out how not to get the same ones.
 		$.each( dataArr, function( idx, val) {
 			let gif = dataArr[idx];
 			$('.gifHolder').append(`
 					<div class="col-xs-10 col-xs-offset-1  col-sm-3 col-md-4 col-lg-3 gifDiv">
-						<img id=${term} class="imgGif" src="${gif.images.original_still.url}" id="${term}" alt="a gif of ${term}"/>
+						<img id=${term} class="imgGif" src="${gif.images.original_still.url}" alt="a gif of ${term}"/>
 						<p class="rating">GIF rating: ${gif.rating}</p>
 					</div>
 			`);
