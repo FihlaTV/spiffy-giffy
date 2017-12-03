@@ -40,6 +40,7 @@ $('.topic, .person, .misc').on("click", function(){
 		url: queryURL,
 		method: 'GET', 
 	}).done(function(res){
+		console.log(res.data[0]);
 		let dataArr = res.data;
 		let urlStill = 
 		console.log(dataArr);
@@ -60,7 +61,7 @@ $('.topic, .person, .misc').on("click", function(){
 		$('.imgGif').each(function(idx) {
 				$(this).on("click", function(){
 					let src = $(this).attr("src");
-					console.log($(this).attr("src"));
+					// console.log($(this).attr("src"));
 				//use endsWith for string
 					if(src.endsWith("s.gif")){
 						$(this).attr('src', src.replace('_s.gif', '.gif'));
