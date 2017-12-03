@@ -1,9 +1,8 @@
 $(document).ready(function(){
-console.log("if you see this, you dun did load.");
 
 let topics = ["greyhounds", "sighthound", "kittens", "puppies", "sloths", "bicycle", "motorcycle", "numbat", "axolotl"];
 
-let people = ["Katy", "Cassidy", "Buscemi","Rossi", "Erik", "Alec", "Rachel", "Lance", "Thomas", "Osei"];
+let people = ["Katy", "Cassidy", "Buscemi", "Rossi", "Erik", "Alec", "Rachel", "Lance", "Thomas", "Osei"];
 
 let misc = ["I hate toast"];
 
@@ -12,6 +11,12 @@ function loadButtons(){
 	$('.buttonHolder1').empty();
 	$('.buttonHolder2').empty();
 	$('.buttonHolder3').empty();
+	/*i can't remember why I chose .map over foreach. does it really matter?
+	also, i wanted to load the functionality when i loaded the buttons, but i 
+	didn't really know how. know-ish, but i wanted to stop while i was ahead. 
+
+	it's been a while, so i think that is why i have set these to variables but have not 
+	used the variabes since. */
 	let giphrames1 = topics.map((topic, idx, arr) =>{
 		$('.buttonHolder1').append(`
 			<button class="btn btn-primary topic terms" id=${topic}>${topic}</button>
@@ -56,39 +61,44 @@ $('.topic, .person, .misc').on("click", function(){
 //target the end of the src url because that's the difference
 
 		$('.imgGif').each(function(idx) {
-				$(this).on("click", function(){
-					let src = $(this).attr("src");
-					// console.log($(this).attr("src"));
-				//use endsWith for string
-					if(src.endsWith("s.gif")){
-						$(this).attr('src', src.replace('_s.gif', '.gif'));
-					} else {
-						$(this).attr('src', src.replace('.gif', '_s.gif'));
-					}
-					//cannot believe that worked! 
-				})
+			$(this).on("click", function(){
+				let src = $(this).attr("src");
+				// console.log($(this).attr("src"));
+			//use endsWith for string
+				if(src.endsWith("s.gif")){
+					$(this).attr('src', src.replace('_s.gif', '.gif'));
+				} else {
+					$(this).attr('src', src.replace('.gif', '_s.gif'));
+				}
+				//cannot believe that worked! 
 			})
+		}) //ends image clicking fcn
+
 	})
 });
 	
 }
 
 loadButtons();
+//TO DO: deal with two word searches
+//terms have _ to link, so deal with that
 
-$(document).on("submit","form", function(e){
-	e.preventDefault();
-	let formVal = $("input").val().trim();
-	if ((formVal == '')||(formVal == null)){
-		alert("Oops. Just say 'No!' to 'null', numbskull?");
-		return;
-	} else{
-		misc.push(formVal);
-		$("input:text").val('');
-		loadButtons();
-		return false;
-	}
-	
-})
+	$(document).on("submit","form", function(e){
+		e.preventDefault();
+		let formVal = $("input").val().trim();
+		//what is the diff between if empty string and null? i don't get the diff but am using both. 
+		//i feel tht they're different enough to need them.
+		if (  (formVal == '')  ||   (formVal == null)   ){
+			alert("Oops. Just say 'No!' to 'null', numbskull?");
+			return;
+		} else{
+			misc.push(formVal);
+			$("input:text").val('');
+			loadButtons();
+			return false;
+		}
+		
+	})
 
 
 });
